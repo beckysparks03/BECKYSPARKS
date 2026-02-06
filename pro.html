@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Professional Work</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- FIXED TOP BAR (same as index) -->
+  <div class="topbar" id="topbar">
+    <div class="topnav">
+      <a class="navlink" href="index.html">PLAY</a>
+      <a class="navlink is-active" href="pro.html">PROFESSIONAL WORK</a>
+      <a class="navlink" href="index.html#about">ABOUT</a>
+      <a class="navlink" href="index.html">BECKY SPARKS</a>
+    </div>
+  </div>
+
+  <!-- PASSWORD OVERLAY -->
+  <div id="pw-overlay" class="pw-overlay" aria-hidden="true">
+    <div class="pw-card">
+      <div class="pw-title">Professional Work</div>
+      <div class="pw-sub">Enter password to continue</div>
+
+      <form id="pw-form" class="pw-form" autocomplete="off">
+        <input id="pw-input" class="pw-input" type="password" placeholder="Password" />
+        <button class="pw-btn" type="submit">Enter</button>
+      </form>
+
+      <div id="pw-error" class="pw-error" aria-live="polite"></div>
+      <a class="pw-back" href="index.html">← Back to Play</a>
+    </div>
+  </div>
+
+  <!-- MEDIA POOL (PRO) -->
+  <div id="media-pool" hidden>
+    <!-- Replace these with your real pro assets -->
+    <article class="card" data-title="Client Project 01" data-desc="Role / year">
+      <img src="img/pro/1.jpg" alt="">
+    </article>
+
+    <article class="card" data-title="Client Project 02" data-desc="Role / year">
+      <video src="img/pro/2.mp4" muted autoplay loop playsinline preload="metadata"></video>
+    </article>
+  </div>
+
+  <!-- COLUMNS -->
+  <main class="columns" id="columns">
+    <section class="col"><div class="viewport"><div class="blur-layer"><div class="inner"></div></div></div></section>
+    <section class="col"><div class="viewport"><div class="blur-layer"><div class="inner"></div></div></div></section>
+    <section class="col"><div class="viewport"><div class="blur-layer"><div class="inner"></div></div></div></section>
+    <section class="col"><div class="viewport"><div class="blur-layer"><div class="inner"></div></div></div></section>
+
+    <!-- INFO COLUMN -->
+    <aside class="info-col" aria-hidden="true">
+      <button class="info-close" aria-label="Close">×</button>
+      <div class="info-content"></div>
+    </aside>
+  </main>
+
+  <!-- IMPORTANT: auth.js must run BEFORE scroll.js so the overlay blocks interaction -->
+  <script src="auth.js" defer></script>
+  <script src="scroll.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Infinite Hover Scroll Columns</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- FIXED TOP BAR (ALWAYS VISIBLE) -->
+  <div class="topbar" id="topbar">
+    <div class="topnav">
+      <!-- PLAY is now a button (drawer) -->
+      <button id="play-toggle" class="navlink navbutton is-active" type="button">PLAY</button>
+
+      <a class="navlink" href="pro.html">PROFESSIONAL WORK</a>
+
+      <!-- ABOUT already a button (drawer) -->
+      <button id="about-toggle" class="navlink navbutton" type="button">ABOUT</button>
+
+      <a class="navlink" href="index.html">BECKY SPARKS</a>
+    </div>
+  </div>
+
+  <!-- PLAY DRAWER (NEW) -->
+  <section id="play-drawer" class="drawer" aria-hidden="true">
+    <div class="drawer-inner">
+      <button id="play-close" class="drawer-close" aria-label="Close Play">×</button>
+
+      <div class="drawer-grid">
+        <div class="drawer-col">
+          <h2>PLAY</h2>
+          <p>
+            A space for experiments, sketches, tests and quick ideas.
+            Scroll a column to explore — click an image to see its info.
+          </p>
+        </div>
+
+        <div class="drawer-col">
+          <h2>NOTES</h2>
+          <p>
+            Everything is shuffled on refresh. Videos autoplay muted.
+          </p>
+        </div>
+
+        <div class="drawer-col">
+          <h2>LINKS</h2>
+          <p>
+            Email: hello@beckysparks.co.uk<br>
+            Instagram: @____
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT DRAWER -->
+  <section id="about-drawer" class="drawer" aria-hidden="true">
+    <div class="drawer-inner">
+      <button id="about-close" class="drawer-close" aria-label="Close About">×</button>
+
+      <div class="drawer-grid">
+        <div class="drawer-col">
+          <h2>ABOUT</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+            nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+          </p>
+        </div>
+
+        <div class="drawer-col">
+          <h2>CONTACT</h2>
+          <p>hello@beckysparks.co.uk</p>
+          <p>Instagram: @____</p>
+        </div>
+
+        <div class="drawer-col">
+          <h2>INFO</h2>
+          <p>Selected clients / press / etc.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEDIA POOL (EDIT THIS ONLY) -->
+  <div id="media-pool" hidden>
+    <article class="card" data-title="Image 1" data-desc="Description here"><img src="img/1.png" alt=""></article>
+    <article class="card" data-title="Image 2" data-desc="Description here"><img src="img/2.png" alt=""></article>
+    <article class="card" data-title="Image 3" data-desc="Description here"><img src="img/3.png" alt=""></article>
+
+    <article class="card" data-title="Video 1" data-desc="Description here"><video src="img/V1.mov" muted autoplay loop playsinline preload="metadata"></video></article>
+    <article class="card" data-title="Video 2" data-desc="Description here"><video src="img/V2.mov" muted autoplay loop playsinline preload="metadata"></video></article>
+     <article class="card" data-title="Video 1" data-desc="Description here"><video src="img/V3.mp4" muted autoplay loop playsinline preload="metadata"></video></article>
+    <article class="card" data-title="Video 2" data-desc="Description here"><video src="img/V4.mp4" muted autoplay loop playsinline preload="metadata"></video></article>
+     <article class="card" data-title="Video 1" data-desc="Description here"><video src="img/V5.mov" muted autoplay loop playsinline preload="metadata"></video></article>
+    <article class="card" data-title="Video 2" data-desc="Description here"><video src="img/V6.MOV" muted autoplay loop playsinline preload="metadata"></video></article>
+     <article class="card" data-title="Video 1" data-desc="Description here"><video src="img/V7.mov" muted autoplay loop playsinline preload="metadata"></video></article>
+    <article class="card" data-title="Video 2" data-desc="Description here"><video src="img/V8.mov" muted autoplay loop playsinline preload="metadata"></video></article>
+     <article class="card" data-title="Video 1" data-desc="Description here"><video src="img/V9.mov" muted autoplay loop playsinline preload="metadata"></video></article>
+    <article class="card" data-title="Video 2" data-desc="Description here"><video src="img/V10.mov" muted autoplay loop playsinline preload="metadata"></video></article>
+     <article class="card" data-title="Video 1" data-desc="Description here"><video src="img/V11.mov" muted autoplay loop playsinline preload="metadata"></video></article>
+    <article class="card" data-title="Video 2" data-desc="Description here"><video src="img/V12.mov" muted autoplay loop playsinline preload="metadata"></video></article>
+     <article class="card" data-title="Video 1" data-desc="Description here"><video src="img/V13.mov" muted autoplay loop playsinline preload="metadata"></video></article>
+    <article class="card" data-title="Video 2" data-desc="Description here"><video src="img/V14.mov" muted autoplay loop playsinline preload="metadata"></video></article>
+    <article class="card" data-title="Video 2" data-desc="Description here"><video src="img/V15.mov" muted autoplay loop playsinline preload="metadata"></video></article>
+  </div>
+
+  <!-- COLUMNS -->
+  <main class="columns" id="columns">
+    <section class="col"><div class="viewport"><div class="blur-layer"><div class="inner"></div></div></div></section>
+    <section class="col"><div class="viewport"><div class="blur-layer"><div class="inner"></div></div></div></section>
+    <section class="col"><div class="viewport"><div class="blur-layer"><div class="inner"></div></div></div></section>
+    <section class="col"><div class="viewport"><div class="blur-layer"><div class="inner"></div></div></div></section>
+
+    <!-- INFO COLUMN -->
+    <aside class="info-col" aria-hidden="true">
+      <button class="info-close" aria-label="Close">×</button>
+      <div class="info-content"></div>
+    </aside>
+  </main>
+
+  <script src="scroll.js" defer></script>
+</body>
+</html>
